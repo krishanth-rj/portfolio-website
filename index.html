@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krishanth | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- navbar -->
+<header class="navbar">
+  <nav id="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button id="theme-toggle" aria-label="Toggle theme">
+      <img src="img/navbar/lightmode.svg" alt="Light mode">
+    </button>
+
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+</header>
+
+<!-- hero -->
+<section id="home" class="hero">
+  <canvas id="asteroidCanvas"></canvas>
+
+  <div class="hero-content">
+    <h1>Hi!, I'm <span>Krishanth</span></h1>
+    <p>Engineering student passionate about building clean, interactive web experiences.</p>
+  </div>
+</section>
+
+<!-- about -->
+<section id="about" class="about">
+  <div class="about-img">
+    <img src="img/pfp/instapfp.PNG" alt="Krishanth">
+  </div>
+
+  <div class="about-text">
+    <h2>About Me</h2>
+    <p>
+      I’m an engineering student deeply interested in building interactive and visually
+      appealing web applications. I enjoy working with modern frontend technologies,
+      focusing on clean design, usability, and smooth user experience. I’m constantly
+      learning, experimenting, and improving through hands-on projects.
+    </p>
+  </div>
+</section>
+
+<!-- project-showcase -->
+<section id="projects" class="projects">
+  <h2>Projects</h2>
+
+  <div class="project-grid">
+
+    <div class="project-card">
+      <img src="img/project-showcase/profile.png" loading="lazy">
+      <h3>Profile Website</h3>
+      <p>Personal portfolio website.</p>
+      <div class="project-links">
+        <a href="https://github.com/krishanth-rj/profile-project" target="_blank" rel="noopener noreferrer" class="ripple">GitHub</a>
+        <a href="https://krishanth-rj.github.io/profile-project/" target="_blank" rel="noopener noreferrer"class="ripple">Website</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="img/project-showcase/gallery.png" loading="lazy">
+      <h3>Gallery</h3>
+      <p>Responsive image gallery.</p>
+      <div class="project-links">
+        <a href="https://github.com/krishanth-rj/gallery-project" target="_blank" rel="noopener noreferrer" class="ripple">GitHub</a>
+        <a href="https://krishanth-rj.github.io/gallery-project/" target="_blank" rel="noopener noreferrer" class="ripple">Website</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="img/project-showcase/todo.png" loading="lazy">
+      <h3>Todo App</h3>
+      <p>Task management application.</p>
+      <div class="project-links">
+        <a href="https://github.com/krishanth-rj/todo-project" target="_blank" rel="noopener noreferrer" class="ripple">GitHub</a>
+        <a href="https://krishanth-rj.github.io/todo-project/" target="_blank" rel="noopener noreferrer" class="ripple">Website</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="img/project-showcase/weather.png" loading="lazy">
+      <h3>Weather App</h3>
+      <p>Weather dashboard using APIs.</p>
+      <div class="project-links">
+        <a href="https://github.com/krishanth-rj/weather-project" target="_blank" rel="noopener noreferrer" class="ripple">GitHub</a>
+        <a href="https://weather-project-eight-ruby.vercel.app/" target="_blank" rel="noopener noreferrer" class="ripple">Website</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- footer -->
+<footer id="contact">
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <div class="social"><img src="img/footer/linkedin.svg"><a href="https://www.linkedin.com/in/krishanth-r-j-1953ab379" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+      <div class="social"><img src="img/footer/gmail.svg"><a href="mailto:krishanth.raya@gmail.com">Email</a></div>
+    </div>
+
+    <div class="footer-right">
+      <div class="social"><img src="img/footer/github.svg"><a href="https://github.com/krishanth-rj" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+      <div class="social"><img src="img/footer/cv.svg"><a href="#">Resume</a></div>
+    </div>
+
+  </div>
+
+  <p class="footer-bottom">
+    📍 Bangalore / Chennai<br>
+    © 2025 Krishanth. All rights reserved.
+  </p>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
+
+
 

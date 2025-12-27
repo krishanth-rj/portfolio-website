@@ -1,0 +1,283 @@
+@font-face {
+  font-family: "Agency FB";
+  src: local("Agency FB");
+}
+
+:root {
+  --bg: #0e0e0e;
+  --text: #ffffff;
+  --accent: #ff8c7a;
+  --nav-bg: rgba(0,0,0,0.85);
+}
+
+body.light {
+  --bg: #ffffff;
+  --text: #0e0e0e;
+  --nav-bg: #ffffff;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Agency FB", sans-serif;
+}
+
+html, body {
+  overflow-x: hidden; 
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2.5rem;
+  background: var(--nav-bg);
+  z-index: 9999;          
+}
+
+#nav-links a {
+  margin-right: 2.5rem;
+  color: var(--text);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+}
+
+#nav-links a:hover {
+  color: var(--accent);
+}
+
+#nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s;
+}
+
+#nav-links a:hover::after {
+  width: 100%;
+}
+
+/* light mode toggle */
+#theme-toggle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: var(--accent);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#theme-toggle img {
+  width: 20px;
+  height: 20px;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(255,140,122,0.7);
+}
+
+#theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.hamburger {
+  display: none;
+}
+
+/* hero */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: none;
+}
+
+.hero-content {
+  position: absolute;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+}
+
+.hero span {
+  color: var(--accent);
+}
+
+/* about */
+.about {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem;
+  gap: 4rem;
+}
+
+.about-img img {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%; 
+  object-fit: cover;
+}
+
+.about-text h2 {
+  font-size: 3.2rem;
+  color: var(--accent);
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* project-showcase */
+.projects {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+}
+
+.projects h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--accent);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 320px);
+  gap: 3rem;
+  justify-content: center;
+}
+
+.project-card {
+  background: #181818;
+  padding: 1.2rem;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+body.light .project-card {
+  background: #f2f2f2;
+  color: #0e0e0e;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.project-links a {
+  margin-right: 1.5rem;
+  color: var(--accent);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ripple effect for project link */
+.project-links a span {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  background: rgba(255,140,122,0.4);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* footer */
+footer {
+  background: #000;
+  color: #fff;
+  padding: 4rem 2rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: auto;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.social img {
+  width: 48px;
+  height: 48px;
+  margin-right: 1rem;
+}
+
+.social a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* mobile responsiveness */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  #nav-links {
+    display: none;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
